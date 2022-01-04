@@ -1,16 +1,16 @@
-﻿namespace TickTackTie.Core
+﻿namespace TicTackToe.Core
 
 open TMPro
 open UnityEngine
 open UnityEngine.UIElements
 
 [<AllowNullLiteral>]
-type Game() =
+type GameComponent() =
     inherit MonoBehaviour()
     
     [<DefaultValue>]
     [<SerializeField>]
-    val mutable private field: Field
+    val mutable private field: FieldComponent
 
     [<DefaultValue>]
     [<SerializeField>]
@@ -20,7 +20,7 @@ type Game() =
     [<SerializeField>]
     val mutable private stateLabel: TextMeshProUGUI
 
-and Field() =
+and FieldComponent() =
     inherit MonoBehaviour()
     
     [<DefaultValue>]
@@ -33,16 +33,16 @@ and Field() =
 
     [<DefaultValue>]
     [<SerializeField>]    
-    val mutable private cells: Cell[]
+    val mutable private cells: CellComponent[]
 
 and [<RequireComponent(typedefof<Collider2D>)>]
     [<RequireComponent(typedefof<SpriteRenderer>)>]
-    Cell() =
+    CellComponent() =
         inherit MonoBehaviour()
         
         [<DefaultValue>]
         [<SerializeField>]
-        val mutable private field: Field
+        val mutable private field: FieldComponent
         
         [<DefaultValue>]
         [<SerializeField>]
