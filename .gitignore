@@ -1,0 +1,13 @@
+**/.idea
+/src/❌⭕🔮/[Ll]ibrary/
+/src/❌⭕🔮/[Tt]emp/
+/src/❌⭕🔮/[Oo]bj/
+/src/❌⭕🔮/[Bb]uild/
+/src/❌⭕🔮/[Bb]uilds/
+/src/❌⭕🔮/[Ll]ogs/
+/src/❌⭕🔮/[Uu]ser[Ss]ettings/
+
+/src/❌⭕🔮/!/[Aa]ssets/**/*.meta
+
+/src/FSharp/**/publish
+/src/FSharp/**/bin

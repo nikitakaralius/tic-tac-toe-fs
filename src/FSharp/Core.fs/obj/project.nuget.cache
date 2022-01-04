@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "yP3U/oEsIXZfqlD9X+6arOm2rh1FRU0jXI5SPn6hzoKp5IQWVp6V3qcQ+9KECJ2HAukQtSTd9r5ev0hPw7n24Q==",
+  "success": true,
+  "projectFilePath": "C:\\Repositories\\tick-tak-toe-fs\\src\\FSharp\\Core.fs\\Core.fs.fsproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\karal\\.nuget\\packages\\fsharp.core\\6.0.1\\fsharp.core.6.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
