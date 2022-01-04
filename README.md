@@ -1,6 +1,6 @@
 ###❌⭕🔮
 
-## Tick Tak toe game
+## Tick Tak Toe game
 
 ---
 
