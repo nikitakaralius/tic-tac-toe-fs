@@ -11,3 +11,4 @@
 
 /src/FSharp/**/publish
 /src/FSharp/**/bin
+/src/FSharp/**/obj
