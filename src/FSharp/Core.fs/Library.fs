@@ -120,12 +120,14 @@ and [<RequireComponent(typedefof<Collider2D>)>]
         val mutable private field: FieldComponent
         
         [<DefaultValue>]
-        [<SerializeField>]
         val mutable private collider: Collider2D
         
         [<DefaultValue>]
-        [<SerializeField>]
         val mutable private renderer: SpriteRenderer
+        
+        member private this.Start() =
+            this.collider <- this.GetComponent<Collider2D>()
+            this.renderer <- this.GetComponent<SpriteRenderer>()
         
         member this.Draw cellSprite gameState =
             this.renderer.sprite <- cellSprite
