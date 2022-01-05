@@ -1,10 +1,14 @@
-﻿module TicTackToe.Core.TicTackToeDomain
+﻿module TicTacToe.Core.Domain
 
 type Position = int * int
 
 type Action =
     | Move of Position
     | Restart
+
+type Update =
+    | None
+    | Action of Action
     
 type Player =
     | X
@@ -94,7 +98,7 @@ let update game action =
         init()
     | Move (px, py) ->
         let board = Array.mapi (fun index cell ->
-            let (cx, cy) = indexToPosition index
+            let cx, cy = indexToPosition index
             if cx = px && cy = py then
                Occupied(game.Current) else cell) game.Board
         
@@ -102,5 +106,5 @@ let update game action =
         match wins currentPlayer board (px, py) with
         | true -> {game with Board = board; State = GameOver (Win currentPlayer)}
         | _ -> match draw board with
-                | true -> {game with Board = board; State = GameOver (Draw)}
+                | true -> {game with Board = board; State = GameOver Draw}
                 | _ -> {game with Board = board; Current = nextPlayerAfter currentPlayer}

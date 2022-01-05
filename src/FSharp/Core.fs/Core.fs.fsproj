@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="TicTackToeDomain.fs" />
+    <Compile Include="Domain.fs" />
     <Compile Include="Library.fs" />
   </ItemGroup>
 

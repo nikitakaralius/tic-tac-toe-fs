@@ -1,15 +1,10 @@
-﻿namespace TicTackToe.Core
+﻿namespace TicTacToe.Core
 
-open System
 open TMPro
 open UnityEngine
 open UnityEngine.Events
 open UnityEngine.UI
-open TicTackToeDomain
-
-type Update =
-    | None
-    | Action of Action
+open Domain
 
 [<AllowNullLiteral>]
 type GameComponent() =
@@ -62,7 +57,7 @@ type GameComponent() =
             
             return! gameLoop initialGame
         }
-        gameFlow |> Async.StartImmediate |> ignore
+        gameFlow |> Async.StartImmediate
 
     member private this.UpdateView game =
         Array.iteri (fun index cell ->
